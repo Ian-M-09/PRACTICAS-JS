@@ -73,3 +73,37 @@ function primo(a){
 console.log(primo(7))
 console.log(primo(4))
     
+console.log("ejercicio 6")
+
+const array1=[1,2,3,4,5]
+const array2=[3,4,5,6,7]
+
+function interseccion(array1,array2){// mi forma
+    let nvo= new Array(),k=0
+    for(let i=0;i<array1.length;i++){
+        for(let j=0;j<array2.length;j++){
+            if(array1[i]===array2[j]){
+                nvo[k]=array1[i]
+                k++
+            }
+        }
+    }
+    return nvo
+}
+
+console.log(`los elementos que tienen en comun son ${interseccion(array1,array2)}`)
+
+function interseccion(array1, array2) {// forma mejorada 
+    const nvo = [];
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                if (!nvo.includes(array1[i])) {
+                    nvo.push(array1[i]);
+                }
+                break;
+            }
+        }
+    }
+    return nvo;
+}
