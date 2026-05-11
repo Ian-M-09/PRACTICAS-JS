@@ -4,11 +4,11 @@
 3. crear una funcion que reciba un string y devuelva el numero de vocales que contiene  *
 4. crear una funcion que reciba un array de strings y devuelva un nuevo array con las strings en mayusculas *
 5. crear una funcion que reciba un numero y devuelva true si es primo, y false en caso contrario *
-6. crear una funcion que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
-7. crear una funcion que reciba un array de numeros y devuelva la suma de todos los numeros pares
-8. crear una funcion que reciba un array de numeros y devuelva un nuevo array con cada numero elevado al cuadrado
-9. crear una funcion que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
-10. crear una funcion que calcule el factorial de un numero dado
+6. crear una funcion que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos *
+7. crear una funcion que reciba un array de numeros y devuelva la suma de todos los numeros pares *
+8. crear una funcion que reciba un array de numeros y devuelva un nuevo array con cada numero elevado al cuadrado *
+9. crear una funcion que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso *
+10. crear una funcion que calcule el factorial de un numero dado 
 */
 
 //1.
@@ -17,6 +17,14 @@ function suma(a,b){
     return a+b
 }
 console.log (suma(5,10))
+
+const suma1=(a,b)=> a+b//funcion flecha
+console.log(suma1(2,3))
+
+const suma2=function(a,b){// funcion anonima
+    return a+b
+}
+console.log(`el resultado es= ${suma2(5,1)}`)
 
 console.log("ejercicio 2")
 
@@ -32,6 +40,7 @@ function mayor(array){
     return m
 }
 console.log(`el numero mayor es ${mayor(array)}`)
+
 
 console.log("ejercicio 3")
 
@@ -107,3 +116,66 @@ function interseccion(array1, array2) {// forma mejorada
     }
     return nvo;
 }
+
+
+console.log("ejercicio 7")
+
+const array3=[2,3,4,5,6,7,8]
+
+function sumaPares(array3){
+    let acu=0
+    for(let i=0;i<array3.length;i++){
+        if(array3[i]%2===0){
+            acu=acu+array3[i]
+        }
+    }
+    return acu
+}
+
+console.log(`la suma de los numeros pares es ${sumaPares(array3)}`)
+
+console.log("ejercicio 8")
+
+const array4=[1,2,3,4]
+
+function elevarCuadrado(array4){
+    nvo= new Array()
+    for(let i=0;i<array4.length;i++){
+        nvo[i]=array4[i]**2
+    }
+    return nvo
+}
+
+console.log(`el nuevo array es ${elevarCuadrado(array4)}`)
+
+console.log("ejercicio 9")
+
+function invierte(string){// mi forma
+    let nvotext="",nvot=""
+    for(let i=string.length-1;i>=0;i--){
+        nvotext=string[i]
+        nvot=nvot+nvotext
+    }   
+    return nvot
+}
+
+console.log(invierte("hola"))
+
+function invierte(string) {// forma mejorada
+    let nvot = "";
+    for (let i = string.length - 1; i >= 0; i--) {
+        nvot += string[i];
+    }
+    return nvot;
+}
+
+function factorial(a){
+    let fac=1 
+    while(a>0){
+        fac=fac+a
+        a--
+    }
+    return fac
+}
+
+console.log(`el factorial es ${factorial(4)}`)
