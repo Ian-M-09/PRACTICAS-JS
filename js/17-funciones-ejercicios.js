@@ -169,6 +169,8 @@ function invierte(string) {// forma mejorada
     return nvot;
 }
 
+console.log("ejercicicio 10")
+
 function factorial(a){
     let fac=1 
     while(a>0){
