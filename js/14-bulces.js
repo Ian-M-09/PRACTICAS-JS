@@ -38,7 +38,7 @@ for(let valor of myarray){
     console.log(valor)
 }
 
-for (let valor of myset){
+for (let valor of myset){// se usa el of para iterar sobre los valores de un set, en cada iteracion la variable valor toma el valor de un elemento del set myset
     console.log(valor)
 }
 
@@ -50,8 +50,8 @@ for(valor of mymap){
 
 
 /* buenas practicas: 
-   break  le digo al ciclo que pare con lo que esta haciendo 
-   continue le digo al ciclo que continue con lo que esta haciendo igorando una condicion que le haya puesto
+break  le digo al ciclo que pare con lo que esta haciendo 
+continue le digo al ciclo que continue con lo que esta haciendo igorando una condicion que le haya puesto
 */
 
 for(let i=0 ; i<10;i++){
@@ -63,3 +63,11 @@ for(let i=0 ; i<10;i++){
     console.log(`hola ${i}`)
 }
 
+for(let key in mymap){
+    console.log(key) // muestra solo las claves del mapa
+    console.log(mymap[key]) // no funciona porque mymap es un mapa y no se accede a sus valores con corchetes, se accede con el metodo get
+    console.log(mymap.get(key)) // muestra los valores del mapa
+}// se usa el in para iterar sobre las claves de un objeto o mapa, y luego se puede usar el metodo get para obtener el valor asociado a cada clave. 
+
+//la diferencia entre for of y for in es que el for of itera sobre los valores de un iterable, mientras que el for in itera sobre las claves de un objeto o mapa. por eso en el for in se usa el metodo get para obtener los valores asociados a las claves.
+// osea el for of se usa para iterar sobre arrays, sets, maps, etc, mientras que el for in se usa para iterar sobre objetos y maps.
