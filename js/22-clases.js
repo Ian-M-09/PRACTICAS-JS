@@ -50,7 +50,7 @@ class PersonWithMethod{
         this.name=name
         this.age=age
     }
-    greet(){// metodo es una funcion que pertenece a una clase, y se define dentro de la clase
+    greet(){// metodo es una funcion que pertenece a una clase
         console.log(`Hola, mi nombre es ${this.name} y tengo ${this.age} años`)// this hace referencia a la instancia de la clase, es decir, al objeto que se esta creando, por lo que this.name y this.age se refieren a las propiedades name y age de la instancia de la clase
     }// para llamar a un metodo de una clase, se usa la sintaxis objeto.metodo(), donde objeto es la instancia de la clase y metodo es el nombre del metodo que queremos llamar
 }// el metodo puede tener el nombre que queramos, y puede recibir argumentos como cualquier otra funcion, pero en este caso no recibe argumentos ya que solo usa las propiedades de la clase para mostrar un mensaje en la consola
