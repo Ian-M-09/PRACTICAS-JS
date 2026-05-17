@@ -65,3 +65,6 @@ function funcion2(){
 }
 
 funcion1()// esto me llama a la funcion funcion1, que a su vez llama a la funcion funcion2, que a su vez llama a console.trace, lo que me muestra la traza de la pila de llamadas en la consola del navegador, indicando el orden en el que se han llamado las funciones hasta llegar a console.trace, lo que puede ser util para depurar el codigo o para verificar el flujo de ejecucion de las funciones en el codigo
+
+// console.clear
+// console.clear()// esto me limpia la consola del navegador, lo que elimina todos los mensajes que se han mostrado en la consola, y deja la consola vacia, lo que puede ser util para depurar el codigo o para limpiar la consola antes de mostrar nuevos mensajes
