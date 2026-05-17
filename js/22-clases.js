@@ -106,6 +106,8 @@ console.log(person8.name)// esto me muestra el nombre de la persona en la consol
 console.log(person8.age)// esto me muestra undefined en la consola, ya que age es una propiedad privada de la clase GetPerson, y no se puede acceder a ella desde fuera de la clase, ni siquiera usando un getter, ya que no se ha definido un getter para esa propiedad privada
 console.log(person8.bank)// esto me muestra undefined en la consola, ya que bank es una propiedad privada de la clase GetPerson, y no se puede acceder a ella desde fuera de la clase, ni siquiera usando un getter, ya que no se ha definido un getter para esa propiedad privada
 person8.bank=5000// esto me asigna el valor 5000 a la propiedad privada #bank de la clase GetPerson, ya que estoy usando el setter bank para actualizar el valor de esa propiedad privada desde fuera de la clase
+ // para obtener el valor de una propiedad privada, se usa la sintaxis objeto.propiedad, donde objeto es la instancia de la clase y propiedad es el nombre del getter que queremos usar, en este caso nombre, que devuelve el valor de la propiedad privada #nombre
+// para obtener el valor de una propiedad privada, se usa la sintaxis objeto.propiedad, donde objeto es la instancia de la clase y propiedad es el nombre del getter que queremos usar, en este caso nombre, que devuelve el valor de la propiedad privada #nombre
 
 // herencia
 // la herencia es una caracteristica de las clases que permite crear una nueva clase a partir de una clase existente, heredando sus propiedades y metodos, y agregando nuevas propiedades y metodos o modificando los existentes
